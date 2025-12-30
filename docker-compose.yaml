@@ -1,0 +1,20 @@
+services:
+
+  rusthelloworld:
+    tty: true
+    build:
+      context: .
+    volumes:
+      - ./hello_world:/usr/src/myapp
+    working_dir: /usr/src/myapp
+    # command: ["run"]
+
+  rustexample1:
+    tty: true
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./example_1:/usr/src/myapp
+    working_dir: /usr/src/myapp
+    # command: ["run"]
