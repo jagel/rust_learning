@@ -39,7 +39,8 @@ use std::mem; // for memory size functions
     println!("The slice is: {}", arr2.len());
     println!("Memory size of arr2: {} bytes", mem::size_of_val(&arr2));
 
-    // println!("Slice of arr : {:?}", arr[1..4]); // index range 1 to 3
-    // println!("Slice of arr : {:?}", arr[1..=4]); // index range 1 to 4
-    // println!("Slice of arr : {:?}", arr[1..5]); // index range 1 to 4
+    let slice_arr: &[i32] = &arr[1..4]; // Slice of entire array
+    println!("Slice of arr : {:?}", slice_arr); // index range 1 to 3
+    println!("Slice of arr : {:?}", &arr[1..=4]); // index range 1 to 4
+    println!("Slice of arr : {:?}", &arr[1..5]); // index range 1 to 4
 }

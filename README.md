@@ -3,7 +3,7 @@
 
 1. Create a new application without installing any rust dependency. This approact does not need to create an image. It gets the latest version of the image located in docker registry
 
-`` docker run -it --rm -v host/path:/usr/src/myapp -w /usr/src/myapp rust cargo run new application_name``
+`` docker run -it --rm -v host/path:/usr/src/myapp -w /usr/src/myapp rust cargo new application_name``
 
 Definition by commands
 - ``-it``: Interactive mode is set in case there the container is requesting input by user

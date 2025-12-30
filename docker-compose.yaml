@@ -1,6 +1,6 @@
 services:
 
-  rusthelloworld:
+  hw:
     tty: true
     build:
       context: .
@@ -9,12 +9,32 @@ services:
     working_dir: /usr/src/myapp
     # command: ["run"]
 
-  rustexample1:
+  ex1:
     tty: true
     build:
       context: .
       dockerfile: Dockerfile
     volumes:
       - ./example_1:/usr/src/myapp
+    working_dir: /usr/src/myapp
+    # command: ["run"]
+
+  ex2:
+    tty: true
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./example_2:/usr/src/myapp
+    working_dir: /usr/src/myapp
+    # command: ["run"]
+  
+  ex3:
+    tty: true
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./example_3:/usr/src/myapp
     working_dir: /usr/src/myapp
     # command: ["run"]
